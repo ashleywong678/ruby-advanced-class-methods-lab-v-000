@@ -43,6 +43,7 @@ class Song
   end
 
   def self.new_from_filename(fileName)
+<<<<<<< HEAD
     #binding.pry
     split_file = fileName.split("-")
     s_name = split_file[1].lstrip.gsub(".mp3", "")
@@ -50,6 +51,14 @@ class Song
     song.artist_name = split_file[0].strip
     song.name = s_name
     return song
+=======
+    split_file = fileName.split("-")
+    s_name = split_file[1].gsub(".mp3", "")
+    song = Song.new
+    song.artist_name = split_file[0]
+    song.name = s_name
+    #binding.pry
+>>>>>>> e474d8c39e3bfe5db0aaa7469f186ad39e0f0d48
   end
 
   def self.create_from_filename(fileName)
